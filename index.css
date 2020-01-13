@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: url('font/Rubik-Regular.eot');
+    src: local('open sans extralight'), local('open-sans-extralight'), url('font/Rubik-Regular.eot?#iefix') format('embedded-opentype'), url('font/Rubik-Regular.woff2') format('woff2'), url('font/Rubik-Regular.woff') format('woff'), url('font/Rubik-Regular.ttf') format('truetype'), url('font/Rubik-Regular.svg#Barlow') format('svg');
+}
+
+:root {
+    --color_1: #006600;
+    --color_2: #001600;
+    --color_3: #000800;
+    --color_back: black;
+    --font: 'Rubik', sans-serif
+}
+
+body {
+    margin: 10px;
+    padding: 0;
+    background-color: var(--color_back);
+    color: var(--color_1);
+    font-family: var(--font);
+    font-size: 20px;
+}
+
+.breadcrumbs {
+    position: fixed;
+    background-color: var(--color_back);
+    padding: 20px 0 20px 40px;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    border-bottom: 3px solid var(--color_1);
+}
+
+.wrap {
+    width: 500px;
+    margin: 100px 0 0 20px;
+}
+
+.space {
+    width: 100px;
+    height: 800px;
+}
+
+.node {
+    border: 1px dotted silver;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: var(--color_back);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    user-select: none;
+}
+
+#menu {
+    position: fixed;
+    right: -300px;
+    top: 150px;
+    width: 320px;
+    background: var(--color_back);
+    color: var(--color_1);
+    border: 3px solid var(--color_1);
+    border-right: none;
+    padding: 20px 10px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    cursor: pointer;
+    display: flex;
+}
+
+#menu:hover {
+    right: 0
+}
+
+#menu .datakind {
+    padding: 10px;
+    margin-left: 30px;
+    user-select: none;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+#menu .datakind:hover {
+    background-color: var(--color_2);
+}
