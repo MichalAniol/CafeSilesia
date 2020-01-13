@@ -36,6 +36,7 @@ body {
 .wrap {
     width: 500px;
     margin: 100px 0 0 20px;
+    height: auto;
 }
 
 .space {
@@ -45,8 +46,8 @@ body {
 
 .node {
     border: 1px dotted silver;
-    padding: 5px 15px;
-    margin-bottom: 10px;
+    padding: 7px 15px;
+    margin-bottom: 5px;
     cursor: pointer;
     overflow: hidden;
     background-color: var(--color_back);

@@ -1,6 +1,6 @@
 const diagram = document.getElementById('diagram'),
     breadcrumbs = document.querySelector('.breadcrumbs'),
-    nodeH = 26;
+    nodeH = 24;
 var currentItem = diagram;
 
 function createItem(parent, child) {
@@ -22,10 +22,10 @@ function goDeeper(parent, child) {
     }
 }
 
-goDeeper(diagram, data_1)
+goDeeper(diagram, data_a)
 
 function checkHeight(item) {
-    let h = item.getBoundingClientRect().height - 10;
+    let h = item.getBoundingClientRect().height - 16;
     item.setAttribute('data-heightmemo', h)
     item.style.height = h + 'px';
 
@@ -67,6 +67,8 @@ document.querySelector('.wrap').addEventListener('click', (e) => {
     breadcrumbs.innerHTML = name;
 
     setColor(e.target)
+
+    document.querySelector('#diagram').style.height = "auto";
 })
 
 function setColor(item) {
@@ -79,7 +81,7 @@ function setColor(item) {
 
 function changeHeight(item, h) {
     let parent = item.parentElement;
-    if (parent != 'diagram') {
+    if (parent.id != 'diagram') {
         let pH = Number(parent.getAttribute('data-heightmemo')) + h;
         parent.setAttribute('data-heightmemo', pH);
         parent.style.height = pH + 'px';
